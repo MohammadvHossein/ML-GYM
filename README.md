@@ -54,11 +54,11 @@ Here are some example projects you might find in the ML-GYM repository:
 These projects will help you gain hands-on experience with scikit-learn and machine learning concepts.
 
 Citations:
-[1] https://github.com/MadcowD/tensorgym
-[2] https://topexceltips.com/tensorflow-project-ideas/
-[3] https://www.gocoder.one/blog/reinforcement-learning-project-ideas/
-[4] https://api.projectchrono.org/development/tutorial_pychrono_demo_tensorflow.html
-[5] https://www.projectpro.io/article/tensorflow-projects-ideas-for-beginners/455
-[6] https://github.com/topics/gym?l=python&o=asc&s=updated
-[7] https://www.tfcertification.com/blog/10-tensorflow-projects-for-any-level
-[8] https://www.diva-portal.org/smash/get/diva2:1674644/FULLTEXT01.pdf
+[1] https://github.com/MadcowD/tensorgym<br>
+[2] https://topexceltips.com/tensorflow-project-ideas/<br>
+[3] https://www.gocoder.one/blog/reinforcement-learning-project-ideas/<br>
+[4] https://api.projectchrono.org/development/tutorial_pychrono_demo_tensorflow.html<br>
+[5] https://www.projectpro.io/article/tensorflow-projects-ideas-for-beginners/455<br>
+[6] https://github.com/topics/gym?l=python&o=asc&s=updated<br>
+[7] https://www.tfcertification.com/blog/10-tensorflow-projects-for-any-level<br>
+[8] https://www.diva-portal.org/smash/get/diva2:1674644/FULLTEXT01.pdf<br>
