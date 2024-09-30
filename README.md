@@ -53,7 +53,7 @@ Here are some example projects you might find in the ML-GYM repository:
 
 These projects will help you gain hands-on experience with scikit-learn and machine learning concepts.
 
-Citations:
+Citations:<br>
 [1] https://github.com/MadcowD/tensorgym<br>
 [2] https://topexceltips.com/tensorflow-project-ideas/<br>
 [3] https://www.gocoder.one/blog/reinforcement-learning-project-ideas/<br>
