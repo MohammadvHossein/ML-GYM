@@ -1,5 +1,5 @@
 from sklearn import datasets
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
@@ -19,12 +19,33 @@ X_test = scaler.transform(X_test)
 
 pickle.dump(scaler, open("standardScaler.pkl", 'wb'))
 
-clf = RandomForestClassifier()
-clf.fit(X_train, y_train)
+rf = RandomForestClassifier()
 
-with open("RF.pkl", 'wb') as model_file:
-    pickle.dump(clf, model_file)
+param_grid = {
+    'n_estimators': [10, 50, 100, 200],
+    'max_features': ['auto', 'sqrt', 'log2'],
+    'max_depth': [None, 10, 20, 30],
+    'min_samples_split': [2, 5, 10],
+    'min_samples_leaf': [1, 2, 4],
+    'bootstrap': [True, False]
+}
 
-y_pred = clf.predict(X_test)
+grid_search = GridSearchCV(estimator=rf,
+                           param_grid=param_grid,
+                           scoring='accuracy',
+                           cv=5,
+                           verbose=2,
+                           n_jobs=-1)
+
+grid_search.fit(X_train, y_train)
+
+print(f"Best parameters: {grid_search.best_params_}")
+
+best_rf = grid_search.best_estimator_
+y_pred = best_rf.predict(X_test)
+
+with open("RandomForest_best.pkl", 'wb') as model_file:
+    pickle.dump(best_rf, model_file)
+
 print(classification_report(y_test, y_pred))
 print(confusion_matrix(y_test, y_pred))
