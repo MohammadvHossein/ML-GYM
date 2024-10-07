@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 
 scaler = pickle.load(open("standardScaler.pkl", 'rb'))
-with open("logistic_model.pkl", 'rb') as model_file:
+with open("LogisticRegression_best.pkl", 'rb') as model_file:
     clf = pickle.load(model_file)
 
 

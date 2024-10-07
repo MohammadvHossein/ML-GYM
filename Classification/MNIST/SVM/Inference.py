@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 
 scaler = pickle.load(open("standardScaler.pkl", 'rb'))
-with open("SVM.pkl", 'rb') as model_file:
+with open("SVM_best.pkl", 'rb') as model_file:
     clf = pickle.load(model_file)
 
 
