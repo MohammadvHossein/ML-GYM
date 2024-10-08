@@ -14,7 +14,7 @@ def predict_digit(new_data):
     return predictions
 
 
-new_data = np.random.randint(0, 255, size=(64)).reshape(1, -1)
+new_data = np.random.randint(0, 255, size=(4)).reshape(1, -1)
 predictions = predict_digit(new_data)
 
 print("Predicted labels:", predictions)
