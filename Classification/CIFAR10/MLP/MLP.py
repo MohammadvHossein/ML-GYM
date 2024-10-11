@@ -12,8 +12,8 @@ transform = transforms.Compose([
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
 
-trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
-testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
+trainset = torchvision.datasets.CIFAR10(root='data', train=True, download=True, transform=transform)
+testset = torchvision.datasets.CIFAR10(root='data', train=False, download=True, transform=transform)
 
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True)
 testloader = torch.utils.data.DataLoader(testset, batch_size=64, shuffle=False)
@@ -48,8 +48,8 @@ mlp = MLPClassifier(max_iter=1000)
 
 param_grid = {
     'hidden_layer_sizes': [(50,), (100,), (50, 50)], 
-    'activation': ['relu', 'tanh', 'logistic'], 
-    'solver': ['adam', 'sgd'], 
+    'activation': ['relu'], 
+    'solver': ['adam'], 
     'alpha': [0.0001, 0.001, 0.01],
     'learning_rate': ['constant', 'adaptive']
 }
